@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    height: 30vh;
+    margin: 50px auto;
+    font-size: 45px;
+}
+
+td {
+    color: white;
+    width: 50%;
+}
+
+.box1 {
+    background-color: rgb(237, 151, 180);
+}
+
+.box2 {
+    background-color: rgb(17, 95, 0);
+}
