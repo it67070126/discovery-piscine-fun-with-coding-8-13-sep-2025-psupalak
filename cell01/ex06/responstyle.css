@@ -1,13 +1,22 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 table {
     width: 100%;
-    height: 30vh;
-    margin: 50px auto;
-    font-size: 45px;
+    height: 100vh;
+    text-align: center;
+    font-size: 100px;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 td {
     color: white;
     width: 50%;
+    vertical-align: middle;
+    padding: 0;
 }
 
 .box1 {
@@ -16,4 +25,29 @@ td {
 
 .box2 {
     background-color: rgb(17, 95, 0);
+}
+
+@media (max-width: 768px) {
+    table {
+        height: auto;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    td {
+        width: 100%;
+        height: 50vh;
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    td {
+        font-size: 16px;
+        height: auto;
+        padding: 40px 10px;
+    }
 }
