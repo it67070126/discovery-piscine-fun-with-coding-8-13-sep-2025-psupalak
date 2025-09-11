@@ -2,7 +2,36 @@
 <html>
 <head>
     <title>calc</title>
-    <link rel="stylesheet" href="calc.css">
+    <style>
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    </style>
 </head>
 <body>
     <div class="main-container">
@@ -22,6 +51,54 @@
             <button id="calcBtn">Try me!</button>
         </div>
     </div>
-    <script src="calc.js"></script>
+
+    <script>
+        setInterval(() => {
+            alert("Please, use me...");
+        }, 30000);
+
+        function showOperation(obt) {
+            console.log(obt.value);
+        }
+
+        function calulation(a, b, operation) {
+            if (operation == "divide" || operation == "mod") {
+                if (b == 0){
+                    alert("It's over 9000");
+                    console.log("It's over 9000!");
+                    return;
+                }
+            }
+            switch(operation){
+                case "plus":
+                    alert(`result: ${parseInt(a) + parseInt(b)}`);
+                    console.log(`result: ${parseInt(a) + parseInt(b)}`);
+                    break;
+                case "minus":
+                    alert(`result: ${parseInt(a) - parseInt(b)}`);
+                    console.log(`result: ${parseInt(a) - parseInt(b)}`);
+                    break;
+                case "multiply":
+                    alert(`result: ${parseInt(a) * parseInt(b)}`);
+                    console.log(`result: ${parseInt(a) * parseInt(b)}`);
+                    break;
+                case "divide":
+                    alert(`result: ${parseInt(a) / parseInt(b)}`);
+                    console.log(`result: ${parseInt(a) / parseInt(b)}`);
+                    break;
+                case "mod":
+                    alert(`result: ${parseInt(a) % parseInt(b)}`);
+                    console.log(`result: ${parseInt(a) % parseInt(b)}`);
+                    break;
+            }
+        }
+
+        document.getElementById("calcBtn").addEventListener("click", () => {
+            const a = document.getElementById("num1").value;
+            const b = document.getElementById("num2").value;
+            const operation = document.getElementById("operation").value;
+            calulation(a, b, operation);
+        });
+    </script>
 </body>
 </html>
