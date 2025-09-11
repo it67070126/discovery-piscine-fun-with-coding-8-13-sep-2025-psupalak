@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>calc</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Calculator</h1>
+            <div class="row">
+                <input type="text" id="num1" name="num1" for="a">
+                <select name="operation" id="operation" onchange="showOperation(this)">
+                    <option value="plus">+</option>
+                    <option value="minus">-</option>
+                    <option value="multiply">*</option>
+                    <option value="divide">/</option>
+                    <option value="mod">%</option>
+                </select>
+                <input type="text" id="num2" name="num2" for="b">
+            </div>
+            <button id="calcBtn">Try me!</button>
+        </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
