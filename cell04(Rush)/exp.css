@@ -5,23 +5,86 @@ body {
     margin: 0;
 }
 
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
 .skill {
     margin-left: 90px;
+}
+
+.first {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.second {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.year .skill {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    gap: 50px;
 }
 
 .python {
     margin-left: 105px;
 }
 
+.python:hover {
+    background-color: #646464;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.java:hover {
+    background-color: #646464;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
 .c {
     margin-left: 100px;
 }
 
-.css {
-    margin-left: 110px;
+.c:hover {
+    background-color: #646464;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
-.js {
-    margin-left: 100px;
-    width: 50px;
+.html {
+    margin-left: 170px;
+}
+
+.html:hover {
+    background-color: #646464;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.description {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.5s ease;
+    max-width: 300px;
+    pointer-events: none; /* กันคลิกพื้นที่ว่างตอนปิด */
+}
+
+.description.show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
 }
