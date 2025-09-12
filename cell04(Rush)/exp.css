@@ -1,0 +1,27 @@
+body {
+    background-color: #0f1a20;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.skill {
+    margin-left: 90px;
+}
+
+.python {
+    margin-left: 105px;
+}
+
+.c {
+    margin-left: 100px;
+}
+
+.css {
+    margin-left: 110px;
+}
+
+.js {
+    margin-left: 100px;
+    width: 50px;
+}
