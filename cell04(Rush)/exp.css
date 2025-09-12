@@ -3,6 +3,7 @@ body {
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 h2 {
@@ -80,11 +81,56 @@ h2 {
     transform: translateX(20px);
     transition: all 0.5s ease;
     max-width: 300px;
-    pointer-events: none; /* กันคลิกพื้นที่ว่างตอนปิด */
+    pointer-events: none;
 }
 
 .description.show {
     opacity: 1;
     transform: translateX(0);
+    transition: all 0.5s ease;
     pointer-events: auto;
+}
+
+.skill img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .first,
+    .second {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .description {
+        max-width: 90%;
+        text-align: center;
+        transform: translateX(0);
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .first,
+    .second {
+        gap: 20px;
+    }
+
+    .description {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 993px) {
+    .description {
+        max-width: 350px;
+    }
 }

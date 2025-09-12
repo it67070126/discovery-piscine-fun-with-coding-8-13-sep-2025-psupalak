@@ -67,8 +67,8 @@ body {
         margin-top: 20px;
     }
     .right img {
-    max-width: 80%;   /* ไม่ให้ใหญ่เกินไป */
-    margin: 0 auto;   /* จัดกึ่งกลาง */
+    max-width: 80%;
+    margin: 0 auto;
     }
 }
 
@@ -77,7 +77,7 @@ body {
         font-size: 1.8rem;
     }
     .right img {
-        max-width: 100%;  /* ใช้ความกว้างเต็มจอ */
-        border-radius: 10px; /* มุมโค้งเล็กลง */
+        max-width: 100%;
+        border-radius: 10px;
     }
 }

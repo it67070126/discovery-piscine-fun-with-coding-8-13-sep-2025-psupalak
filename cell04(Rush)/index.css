@@ -5,7 +5,7 @@ body {
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .home {
@@ -16,25 +16,30 @@ body {
     font-weight: bold;
     color: #a4c8fb;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     border-radius: 30px;
+    padding: 20px;
 }
 
 h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
 }
 
 .profile-container {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap; /* เพื่อให้ขึ้นบรรทัดใหม่ได้เวลาเล็กลง */
+    justify-content: center;
 }
 
 .profile {
@@ -44,11 +49,15 @@ h1 {
     cursor: pointer;
     align-items: center;
     flex-direction: column;
+    flex: 1 1 250px; /* ยืด-หดอัตโนมัติ */
+    max-width: 300px;
 }
 
 .profile img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s, border 0.3s;
 }
@@ -60,7 +69,37 @@ h1 {
 
 .profile p {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
+/* 📱 มือถือเล็กสุด */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .home {
+        font-size: 24px;
+        left: 15px;
+        top: 10px;
+    }
+    .profile-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .profile img {
+        max-width: 200px;
+    }
+}
 
+/* 📱 แท็บเล็ต */
+@media (min-width: 577px) and (max-width: 992px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .profile-container {
+        gap: 40px;
+    }
+    .profile img {
+        max-width: 220px;
+    }
+}

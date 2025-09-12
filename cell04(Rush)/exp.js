@@ -7,10 +7,8 @@ function toggleDescription(logoId, descId) {
     });
 }
 
-// ใช้งานกับ Python
 toggleDescription("python-logo", "python-desc");
 
-// ใช้งานกับ Java
 toggleDescription("java-logo", "java-desc");
 
 toggleDescription("c-logo", "c-desc");
